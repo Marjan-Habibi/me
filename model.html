@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model window</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Creepster&family=DM+Serif+Text:ital@0;1&family=Lobster&family=Luckiest+Guy&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <style>
+       
+body {
+   display: flex;
+   flex-direction: row;  
+   justify-content: center;
+   align-items: center;
+   gap: 10px;   
+   min-height: 100vh;
+   background: linear-gradient(135deg, #bdfafa, #f9fabd, #f655cd);
+}
+
+/* Button */
+.show-model {
+    background-color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Righteous", sans-serif;
+}
+
+.show-model:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* /* overlay  */
+.overly {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+/* model */
+.model {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+
+    background-color: #fff8dc; 
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* button close */
+.close-model {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-model:hover {
+    color: red;
+}
+
+
+.model h1 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.model p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <body>
+    
+        <button class="show-model" data-target="modal1">Marjan😎🦾</button>
+        <button class="show-model" data-target="modal2">My Skills</button>
+        <button class="show-model" data-target="modal3">Writing</button>
+    
+        <!-- مودال 1 -->
+        <div class="model hidden" id="modal1">
+            <div class="close-model">&times;</div>
+            <h1>Hi! I’m Marjan 😎✌️</h1>
+            <p>A girl who’s always chasing new things to learn—from coding and web design to philosophy and writing. Most of the time you’ll find me with a book in my hand or writing something down, but I also love playing around with tech and programming.
+                I’m not the type who wants to follow just one path—I dream of being both a doctor and a writer, working with people’s minds and their hearts at the same time. 🌱
+                
+                I see life as an adventure—full of twists, challenges, and surprises. And honestly, that’s what makes it beautiful. ✨</p>
+        </div>
+    
+        <!-- مودال 2 -->
+        <div class="model hidden" id="modal2">
+            <div class="close-model">&times;</div>
+            <h1>I’m Marjan ✨ A girl who loves learning and creativity.</h1>
+            <p>I have a passion for calligraphy, shaping words beautifully on paper. Photography is my way of capturing moments that no words could ever describe. Writing is another world for me, and right now I’m working on my very first book, where my stories and experiences come to life.
+                
+                On the other hand, coding and web design are like a bridge between imagination and reality—where I can turn my ideas into something digital and alive. By joining different educational and leadership programs, I’ve also gained skills in teamwork, women empowerment, and communication.
+                
+                For me, life is a journey full of discoveries and creations—whether through a pen, a camera, or a line of code. 🌱📸💻✍️</p>
+        </div>
+    
+        <!-- مودال 3 -->
+        <div class="model hidden" id="modal3">
+            <div class="close-model">&times;</div>
+            <h1>Writing ✍️</h1>
+            <p>This morning, the air was cold and dark,
+                until the afternoon, when the sun returned and brightened the sky.
+                Yet, my heart grew heavy.
+                
+                Through the window, the sunlight looked dazzling.
+                I opened the door and stepped onto the balcony.
+                I stood close to the wall, gazing at the blue sky and the radiant sun.
+                Then, the doves began their fearless dance in the air.
+                The sound of their wings touched my heart.
+                
+                The sun shone brighter than the days before,
+                its light blurring my eyes.
+                As I watched the flight of the doves,
+                a deep sense of servitude overwhelmed me......</p>
+        </div>
+    
+        <!-- 👇 فقط یک overlay -->
+        <div class="overly hidden"></div>
+    
+        <script src="model.js"></script>
+    </body>
+    
+    <script src="model.js"></script>
+</body>
+</html>
